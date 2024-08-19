@@ -74,7 +74,7 @@ early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weig
 
 
 # Determine the best threshold to maximize F1 score
-kf = KFold(n_splits=2, shuffle=True, random_state=42)
+kf = KFold(n_splits=5, shuffle=True, random_state=42)
 
 models = {
     'CNN': create_cnn_model,
@@ -156,7 +156,7 @@ for model_name, create_model in models.items():
     X_train_resampled = X_train_resampled.reshape((X_train_resampled.shape[0], X_train_resampled.shape[1], 1))
     X_train_kmer_resampled = X_train_kmer_resampled.reshape((X_train_kmer_resampled.shape[0], X_train_kmer_resampled.shape[1]))
 
-    model.fit([X_train_resampled, X_train_kmer_resampled, X_train_resampled[:, :6]], y_train_resampled, epochs=1, batch_size=32, verbose=0)
+    model.fit([X_train_resampled, X_train_kmer_resampled, X_train_resampled[:, :6]], y_train_resampled, epochs=100, batch_size=32, verbose=0)
 
     # Predict probabilities on the test set
     X_test_reshaped = X_test.reshape((X_test.shape[0], X_test.shape[1], 1))

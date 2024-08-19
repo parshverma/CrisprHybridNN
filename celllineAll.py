@@ -116,7 +116,7 @@ for cell_line in cell_lines:
             best_f1 = 0
             best_threshold = None
 
-            kf = KFold(n_splits=2, shuffle=True, random_state=42)
+            kf = KFold(n_splits=5, shuffle=True, random_state=42)
             for threshold in thresholds:
                 fold_metrics = []
                 for train_index, val_index in kf.split(X_train):
@@ -141,7 +141,7 @@ for cell_line in cell_lines:
                     model = create_model(X_train_fold_resampled.shape[1], vocab_size, embedding_dim, max_len)
                     model.fit([X_train_fold_resampled, X_train_kmer_fold_resampled, X_train_fold_resampled[:, :6]], y_train_fold_resampled,
                               validation_data=([X_val_fold.reshape((X_val_fold.shape[0], X_val_fold.shape[1], 1)), X_val_kmer_fold, X_val_fold[:, :6]], y_val_fold),
-                              epochs=1, batch_size=32, verbose=0, callbacks=[early_stopping])
+                              epochs=100, batch_size=32, verbose=0, callbacks=[early_stopping])
 
                     # Predict probabilities
                     X_val_fold_reshaped = X_val_fold.reshape((X_val_fold.shape[0], X_val_fold.shape[1], 1))
@@ -183,7 +183,7 @@ for cell_line in cell_lines:
                 model = create_model(X_train_fold_resampled.shape[1], vocab_size, embedding_dim, max_len)
                 model.fit([X_train_fold_resampled, X_train_kmer_fold_resampled, X_train_fold_resampled[:, :6]], y_train_fold_resampled,
                           validation_data=([X_val_fold.reshape((X_val_fold.shape[0], X_val_fold.shape[1], 1)), X_val_kmer_fold, X_val_fold[:, :6]], y_val_fold),
-                          epochs=1, batch_size=32, verbose=0, callbacks=[early_stopping])
+                          epochs=100, batch_size=32, verbose=0, callbacks=[early_stopping])
 
                 # Predict probabilities
                 X_val_fold_reshaped = X_val_fold.reshape((X_val_fold.shape[0], X_val_fold.shape[1], 1))
