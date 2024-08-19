@@ -8,10 +8,7 @@ This repository contains the code for a series of hybrid neural network architec
 - [Project Overview](#project-overview)
 - [Architecture Details](#architecture-details)
 - [Model Training and Evaluation](#model-training-and-evaluation)
-- [Requirements](#requirements)
-- [Usage](#usage)
-- [Results](#results)
-- [License](#license)
+
 
 ## Project Overview
 
