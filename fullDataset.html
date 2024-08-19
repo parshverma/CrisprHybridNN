@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {border-collapse: collapse; width: 100%; max-width: 1000px; word-wrap: break-word;}
+        th {background-color: #f2f2f2; color: #333; padding: 8px; text-align: center; border: 1px solid black;}
+        td {padding: 8px; text-align: center; border: 1px solid black; word-wrap: break-word;}
+    </style>
+</head>
+<body>
+    <h3>All Architectures Metrics</h3>
+<table border="1" class="dataframe table table-bordered table-striped">
+  <thead>
+    <tr style="text-align: center;">
+      <th style="background-color: #f2f2f2;">Architecture</th>
+      <th style="background-color: #f2f2f2;">Model</th>
+      <th style="background-color: #f2f2f2;">Accuracy</th>
+      <th style="background-color: #f2f2f2;">Precision</th>
+      <th style="background-color: #f2f2f2;">Recall</th>
+      <th style="background-color: #f2f2f2;">F1_score</th>
+      <th style="background-color: #f2f2f2;">AUC</th>
+      <th style="background-color: #f2f2f2;">Balanced_accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background-color: #e0f7fa;">Architecture 1</td>
+      <td>BiDirectional LSTM</td>
+      <td>0.7370</td>
+      <td>0.7271</td>
+      <td>0.7589</td>
+      <td>0.7423</td>
+      <td>0.8287</td>
+      <td>0.7370</td>
+    </tr>
+    <tr>
+      <td style="background-color: #e0f7fa;">Architecture 1</td>
+      <td>CNN</td>
+      <td>0.7368</td>
+      <td>0.7715</td>
+      <td>0.6743</td>
+      <td>0.7181</td>
+      <td style="background-color: #bfbfbf">0.8369</td>
+      <td>0.7368</td>
+    </tr>
+    <tr>
+      <td style="background-color: #e0f7fa;">Architecture 1</td>
+      <td>GRU</td>
+      <td>0.7387</td>
+      <td>0.7129</td>
+      <td style="background-color: #bfbfbf">0.8021</td>
+      <td style="background-color: #bfbfbf">0.7541</td>
+      <td>0.8316</td>
+      <td>0.7390</td>
+    </tr>
+    <tr>
+      <td style="background-color: #e0f7fa;">Architecture 1</td>
+      <td>LSTM</td>
+      <td>0.7347</td>
+      <td>0.7328</td>
+      <td>0.7582</td>
+      <td>0.7377</td>
+      <td>0.8324</td>
+      <td>0.7345</td>
+    </tr>
+    <tr>
+      <td style="background-color: #fff3e0;">Architecture 2</td>
+      <td>CNN+BiDirectional LSTM</td>
+      <td>0.7304</td>
+      <td>0.7300</td>
+      <td>0.7520</td>
+      <td>0.7331</td>
+      <td>0.8283</td>
+      <td>0.7312</td>
+    </tr>
+    <tr>
+      <td style="background-color: #fff3e0;">Architecture 2</td>
+      <td>CNN+GRU</td>
+      <td style="background-color: #bfbfbf;">0.7459</td>
+      <td>0.7361</td>
+      <td>0.7677</td>
+      <td>0.7512</td>
+      <td>0.8354</td>
+      <td style="background-color: #bfbfbf">0.7460</td>
+    </tr>
+    <tr>
+      <td style="background-color: #fff3e0;">Architecture 2</td>
+      <td>CNN+LSTM</td>
+      <td>0.7369</td>
+      <td style="background-color: #bfbfbf">0.7731</td>
+      <td>0.6804</td>
+      <td>0.7178</td>
+      <td>0.8326</td>
+      <td>0.7362</td>
+    </tr>
+    <tr>
+      <td style="background-color: #f3e5f5;">Architecture 3</td>
+      <td>CNN+BiDirectional LSTM+Attention</td>
+      <td>0.7331</td>
+      <td>0.7223</td>
+      <td>0.7584</td>
+      <td>0.7392</td>
+      <td>0.8228</td>
+      <td>0.7327</td>
+    </tr>
+    <tr>
+      <td style="background-color: #f3e5f5;">Architecture 3</td>
+      <td>CNN+GRU+Attention</td>
+      <td>0.7307</td>
+      <td>0.7613</td>
+      <td>0.6832</td>
+      <td>0.7155</td>
+      <td>0.8298</td>
+      <td>0.7311</td>
+    </tr>
+    <tr>
+      <td style="background-color: #f3e5f5;">Architecture 3</td>
+      <td>CNN+LSTM+Attention</td>
+      <td>0.7323</td>
+      <td>0.7120</td>
+      <td>0.7897</td>
+      <td>0.7455</td>
+      <td>0.8289</td>
+      <td>0.7326</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

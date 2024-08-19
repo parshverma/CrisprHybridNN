@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {border-collapse: collapse; width: 100%;}
+        th {background-color: #f2f2f2; color: #333; padding: 8px; text-align: center; border: 1px solid black;}
+        td {padding: 8px; text-align: center; border: 1px solid black;}
+        /* .shade1 {background-color: #d9d9d9;} 
+        .shade2 {background-color: #bfbfbf;} 
+        .shade3 {background-color: #a6a6a6;}  */
+
+        .shade1 {background-color: #ffffff;} /* Light grey */
+        .shade2 {background-color: #ffffff;} /* Medium grey */
+        .shade3 {background-color: #ffffff;} /* Darker grey */
+    </style>
+</head>
+<body>
+    <h3>Combined Cell Line Metrics</h3>
+<table border="1" class="dataframe table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th rowspan="2">Model</th>
+      <th colspan="6" style="background-color: #e0f7fa;">U2OS</th>
+      <th colspan="6" style="background-color: #fff3e0;">HEK293</th>
+      <th colspan="6" style="background-color: #f3e5f5;">K562</th>
+    </tr>
+    <tr>
+      <th style="background-color: #e0f7fa;">Accuracy</th>
+      <th style="background-color: #e0f7fa;">Precision</th>
+      <th style="background-color: #e0f7fa;">Recall</th>
+      <th style="background-color: #e0f7fa;">F1_score</th>
+      <th style="background-color: #e0f7fa;">AUC</th>
+      <th style="background-color: #e0f7fa;">Balanced_accuracy</th>
+      <th style="background-color: #fff3e0;">Accuracy</th>
+      <th style="background-color: #fff3e0;">Precision</th>
+      <th style="background-color: #fff3e0;">Recall</th>
+      <th style="background-color: #fff3e0;">F1_score</th>
+      <th style="background-color: #fff3e0;">AUC</th>
+      <th style="background-color: #fff3e0;">Balanced_accuracy</th>
+      <th style="background-color: #f3e5f5;">Accuracy</th>
+      <th style="background-color: #f3e5f5;">Precision</th>
+      <th style="background-color: #f3e5f5;">Recall</th>
+      <th style="background-color: #f3e5f5;">F1_score</th>
+      <th style="background-color: #f3e5f5;">AUC</th>
+      <th style="background-color: #f3e5f5;">Balanced_accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="shade1">
+      <td>M1</td>
+      <td>0.7492</td><td>0.7707</td><td>0.7131</td><td>0.7381</td><td>0.8412</td><td>0.7482</td>
+      <td>0.7153</td><td>0.7286</td><td>0.7081</td><td>0.7103</td><td>0.8047</td><td>0.7169</td>
+      <td>0.8299</td><td>0.8694</td><td style="background-color: #bfbfbf;">0.7793</td><td>0.8207</td><td>0.8785</td><td>0.8287</td>
+    </tr>
+    <tr class="shade2">
+      <td>M2</td>
+      <td>0.7415</td><td style="background-color: #bfbfbf;">0.7948</td><td>0.6518</td><td>0.7155</td><td>0.8377</td><td>0.7415</td>
+      <td style="background-color: #bfbfbf;">0.7262</td><td style="background-color: #bfbfbf;">0.7465</td><td>0.6854</td><td>0.7137</td><td style="background-color: #bfbfbf;">0.8082</td><td style="background-color: #bfbfbf;">0.7259</td>
+      <td style="background-color: #bfbfbf;">0.8378</td><td style="background-color: #bfbfbf;">0.8974</td><td>0.7624</td><td style="background-color: #bfbfbf;">0.8239</td><td style="background-color: #bfbfbf;">0.8990</td><td style="background-color: #bfbfbf;">0.8378</td>
+    </tr>
+    <tr class="shade3">
+      <td>M3</td>
+      <td>0.7475</td><td>0.7685</td><td>0.7103</td><td>0.7367</td><td>0.8387</td><td>0.7471</td>
+      <td>0.7168</td><td>0.7086</td><td>0.7392</td><td>0.7214</td><td>0.8020</td><td>0.7157</td>
+      <td>0.8191</td><td>0.8707</td><td>0.7529</td><td>0.8061</td><td>0.8740</td><td>0.8175</td>
+    </tr>
+    <tr class="shade1">
+      <td>M4</td>
+      <td>0.7475</td><td>0.7760</td><td>0.7054</td><td>0.7355</td><td>0.8391</td><td>0.7472</td>
+      <td>0.7143</td><td>0.7040</td><td>0.7572</td><td style="background-color: #bfbfbf;">0.7249</td><td>0.8048</td><td>0.7147</td>
+      <td>0.8122</td><td>0.8618</td><td>0.7456</td><td>0.7988</td><td>0.8698</td><td>0.8113</td>
+    </tr>
+    <tr class="shade2">
+      <td>M5</td>
+      <td>0.7585</td><td>0.7733</td><td>0.7471</td><td>0.7542</td><td style="background-color: #bfbfbf;">0.8422</td><td>0.7586</td>
+      <td>0.6989</td><td>0.6860</td><td>0.7571</td><td>0.7117</td><td>0.7846</td><td>0.7007</td>
+      <td>0.6991</td><td>0.7066</td><td>0.6993</td><td>0.6955</td><td>0.7793</td><td>0.7013</td>
+    </tr>
+    <tr class="shade3">
+      <td>M6</td>
+      <td>0.7551</td><td>0.7773</td><td>0.7221</td><td>0.7461</td><td>0.8397</td><td>0.7553</td>
+      <td>0.6880</td><td>0.7003</td><td>0.6674</td><td>0.6801</td><td>0.7754</td><td>0.6886</td>
+      <td>0.6991</td><td>0.6931</td><td>0.7209</td><td>0.7041</td><td>0.7831</td><td>0.6981</td>
+    </tr>
+    <tr class="shade1">
+      <td>M7</td>
+      <td>0.7599</td><td>0.7814</td><td>0.7304</td><td>0.7525</td><td>0.8408</td><td>0.7604</td>
+      <td>0.6771</td><td>0.6977</td><td>0.6608</td><td>0.6618</td><td>0.7706</td><td>0.6786</td>
+      <td>0.7070</td><td>0.7510</td><td>0.6464</td><td>0.6834</td><td>0.7847</td><td>0.7094</td>
+    </tr>
+    <tr class="shade2">
+      <td>M8</td>
+      <td>0.7521</td><td>0.7655</td><td>0.7580</td><td style="background-color: #bfbfbf;">0.7609</td><td>0.8417</td><td>0.7614</td>
+      <td>0.7014</td><td>0.6996</td><td>0.7126</td><td>0.7006</td><td>0.7762</td><td>0.6998</td>
+      <td>0.7050</td><td>0.7157</td><td>0.6938</td><td>0.7011</td><td>0.7678</td><td>0.7050</td>
+    </tr>
+    <tr class="shade3">
+      <td>M9</td>
+      <td>0.7566</td><td>0.7486</td><td style="background-color: #bfbfbf;">0.7777</td><td>0.7607</td><td>0.8392</td><td>0.7556</td>
+      <td>0.6999</td><td>0.6711</td><td style="background-color: #bfbfbf;">0.7890</td><td>0.7243</td><td>0.7798</td><td>0.7003</td>
+      <td>0.7071</td><td>0.7236</td><td>0.6752</td><td>0.6957</td><td>0.7855</td><td>0.7077</td>
+    </tr>
+    <tr class="shade1">
+      <td>M10</td>
+      <td style="background-color: #bfbfbf;">0.7629</td><td>0.7739</td><td>0.7487</td><td>0.7587</td><td>0.8413</td><td style="background-color: #bfbfbf;">0.7623</td>
+      <td>0.6915</td><td>0.6704</td><td>0.7693</td><td>0.7127</td><td>0.7756</td><td>0.6928</td>
+      <td>0.7100</td><td>0.7133</td><td>0.7043</td><td>0.7062</td><td>0.7770</td><td>0.7098</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
